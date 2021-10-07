@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horoskop</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .btn {
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Welcome To Program Horoskop</h1>
+        <input class="btn" type="button" value="Click here!" onclick="luck()">
+        <p id="text">Keberuntungan Anda hari ini:</p>
+    </div>
+    <script>
+        const main = document.querySelector('.main')
+
+        function luck() {
+            const randomNumber = Date.now()
+            const num = randomNumber % 10
+            const text2 = document.createElement('p')
+
+            switch (num) {
+                case 0:
+                    text2.innerText = 'Boleh Juga';
+                    break;
+                case 1:
+                    text2.innerText = 'Hebat!!';
+                    break;
+                case 2:
+                    text2.innerText = 'Mengerikan...';
+                    break;
+                case 3:
+                    text2.innerText = 'Boleh Juga';
+                    break;
+                case 4:
+                    text2.innerText = 'Hebat!!';
+                    break;
+                case 5:
+                    text2.innerText = 'Mengerikan...';
+                case 6:
+                    text2.innerText = 'Boleh Juga';
+                    break;
+                case 7:
+                    text2.innerText = 'Hebat!!';
+                    break;
+                case 8:
+                    text2.innerText = 'Mengerikan...';
+                    break;
+                case 9:
+                    text2.innerText = 'Boleh Juga';
+                    break;
+                default:
+                    text2.innerText = 'Hebat!!';
+                    break;
+            }
+            main.append(text2)
+        }
+    </script>
+</body>
+
+</html>
